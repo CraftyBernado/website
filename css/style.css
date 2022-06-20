@@ -1,0 +1,103 @@
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+:root {
+  --main-text-color: rgb(247, 240, 231);
+  --main-border-color: rgb(247, 247, 177);
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Special Elite', cursive;
+}
+
+.mainsection {
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--main-text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.background {
+  background-position: center;
+  /* hero image for background */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/profilepic1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.container {
+  display: flex;
+}
+
+p {
+  margin-bottom: 10rem;
+  font-size: 1.5rem;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+.topTitle {
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 2rem;
+}
+
+.topTitle > hr {
+  width: 30%;
+  color: var(--main-text-color);
+}
+
+li {
+  list-style: none;
+  padding: 0rem 1rem;
+}
+
+.iconBar {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  color: var(--main-text-color);
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 0;
+
+
+}
+
+nav {
+  width: 100%;
+  justify-content: space-between;
+  color: var(--main-text-color);
+  /* glass effect */
+  backdrop-filter: blur(3px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+.homeButton {
+  font-size: 2rem;
+  padding: 0.25rem 0 0.25rem 2rem;
+  font-family: 'Caveat';
+}
+
+.fadeout {
+  color: rgb(247, 240, 231, 0.8);
+}
