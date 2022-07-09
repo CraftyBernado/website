@@ -1,4 +1,3 @@
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -8,13 +7,14 @@
   --main-border-color: rgb(247, 247, 177);
 }
 
-body, html {
+body,
+html {
   height: 100%;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   scroll-behavior: smooth;
 }
 
-main{
+main {
   flex-direction: column;
 }
 
@@ -30,7 +30,8 @@ main{
 
 .background {
   /* hero image for background */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/profilepic1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/profilepic1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,23 +52,24 @@ main{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  row-gap: 4rem;
+  row-gap: 1rem;
 }
 
-p {
+.mainsection > p {
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
-
+.mainsection > a {
+  padding: 5rem 0 1rem 0;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-
 .topTitle {
   text-shadow: 2px 2px 4px #000000;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .topTitle > hr {
@@ -104,7 +106,7 @@ nav {
 .homeButton {
   font-size: 2rem;
   padding: 0.25rem 0 0.25rem 2rem;
-  font-family: 'Caveat';
+  font-family: "Caveat";
 }
 
 .fadeout {
@@ -118,25 +120,77 @@ nav {
 }
 
 .projectPanel {
-  border: 1px black solid;
-  grid-column: span 2;
+  grid-column: span 4;
   justify-content: center;
 }
 
 .projectImg {
-  width: 75%
+  width: 75%;
+  opacity: 0.85;
 }
 
-.projectSection{
+.projectSection {
+  padding: 3rem 0 0 0;
   margin: 0 auto;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
-  color: white;
+  color: var(--main-text-color);
 }
 
-.sectionTwo{
+.sectionTwo {
   height: 100vh;
   align-items: center;
+}
+
+/* need to work out how to get 100% height on project panel */
+.imgCaption {
+  width: 75%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  color: var(--main-text-color);
+}
+
+.imgCaption > h1 {
+  color: #00bfb6;
+}
+
+.imgCaption:hover {
+  opacity: 1;
+}
+
+/* tooltips */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
